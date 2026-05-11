@@ -3,17 +3,13 @@ Update the swissalti3d source of Mapterhorn
 
 ## Steps
 
-Open webpage https://www.swisstopo.admin.ch/en/height-model-swissalti3d
+Query what the current file list of Swisstopo is and write it to current_file_list.txt with:
 
-Selection mode -> entire dataset
+```
+uv run python query_swisstopo.py
+```
 
-Click "search"
-
-Click "export all links"
-
-Save as ./current_file_list.txt
-
-Get a list of only the new files with
+Find what files are not yet in Mapterhorn and write them to new_file_list.txt with:
 
 ```
 uv run python new_files.py
